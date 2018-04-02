@@ -1,0 +1,103 @@
+$internal-promo-grid: (
+  columns: 3,
+  gutter: 2rem,
+  media: 1000px,
+);
+
+
+.internal-promo {
+	&__container {
+		position: relative;
+		padding:2rem 1rem;
+		background: white;
+		border-bottom: 5px solid darken(#f8f8f8, 3%);
+		margin-bottom: 1rem;
+
+		@include grid-media($internal-promo-grid){
+			@include grid-container;
+			.internal-promo__body {
+				@include grid-column(2);
+			}		
+			.internal-promo__benefits, .internal-promo__img {
+				@include grid-column(1);
+
+				//@include grid-column(5);
+				ul, img {
+	
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					padding-right:1rem;
+				}
+				
+			}		
+			
+		}
+		
+
+
+
+	}
+ 	&__img {
+ 		display:none;
+ 		@include bp(desktop) {
+ 			display:block;
+ 		}
+ 	}
+	&__benefits {
+		
+		// border: 1px solid darken(#fafafa, 2%);
+		// background: #fafafa;
+
+
+		ul {
+			display:block;
+			font-size: 0.9rem;
+			margin-top:0;
+			line-height:1.2;
+			margin-left:0.4rem;
+			padding: 1rem 0;
+			padding-right:2rem;
+			list-style-type: none;
+		
+		}
+		li {
+			color: $blue;
+			margin-left:0.8rem;
+			position: relative;
+			&:before {
+				font-family: 'Font Awesome 5 Pro';
+				font-weight: 900;
+				content:'\f00c';
+				position:absolute; left:-1.1rem;
+				top:0.2rem;
+				font-size:0.7rem;
+				color: green;
+			}
+		}
+	}
+	&__body { 
+
+		@include bp(desktop) {
+			@include grid-column(7);
+		}
+	
+		p {
+			margin: 0.7rem 0 1.2rem;
+			font-size: 1rem;
+		}
+		
+
+	}
+	.title {
+		margin: 0;
+		font-size: 1.3rem;
+		font-weight:100;
+		color: $blue !important;
+		&--light {
+			font-size:1.2rem;
+			color: #777 !important;
+			font-weight:100;
+		}
+	}
+}

@@ -1,0 +1,39 @@
+h2.line {
+	margin-bottom: 3rem !important;
+}
+
+.garage-door {
+	display:block;
+	margin-bottom:4rem;
+	&__hero {
+		background-size: cover;
+		&--sectional {
+
+			background-image: url('/img/garage-doors/garage-doors_sectional-2.jpg');
+		}		
+		&--side-hinged {
+			background-position:right;
+			background-image: url('/img/garage-doors/garage-doors_side-hinged.jpg');
+		}		
+		&--up-and-over {
+
+			background-image: url('/img/garage-doors/garage-doors_up-and-over.jpg');
+		}		
+		&--roller {
+			background-position: right;
+			background-image: url('/img/garage-doors/garage-doors_roller.jpg');
+		}
+	}
+	&__overlay {
+		background: transparentize(black, 0.8);
+		h2 {
+			padding: 15rem 0 3rem 1rem;
+			color: white;
+			font-size: 2.2rem;
+			font-weight: 100;
+			@include bp(tablet) {
+				padding: 15rem 0 3rem 3rem;
+			}
+		}
+	}
+}

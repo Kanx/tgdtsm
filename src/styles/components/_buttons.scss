@@ -1,0 +1,74 @@
+.btn {
+	cursor: pointer;
+	border-radius: 3px;
+	color: white;
+	background: $blue;
+	padding: 1rem 1.3rem;
+	transition: all 0.4s;
+
+	border-bottom: 3px solid darken($blue, 8%);
+	display: inline-block;
+	&:hover {
+		background: darken($blue, 4%);
+		color: white;
+	}
+	&--primary {
+		color: white;
+		background: $blue;
+		&.hollow {
+			background:transparent;
+			border: 2px solid $blue;
+			color: $blue;
+			&:hover {
+				background: darken($blue, 4%) !important;
+				color: white;
+			}
+		}
+	}	
+
+	&--secondary-hollow {
+		border: 2px solid white;
+		color: white;
+		background: transparent;
+		&:hover {
+			border: 2px solid $red;
+			background: $red;
+		}
+	}
+	&--secondary {
+		background: $red;
+		border-bottom: 3px solid darken($red, 15%);
+		&:hover {
+			background: darken($red, 10%);
+			color: white;
+		}
+		&.hollow {
+			border: 2px solid $red;
+			color: $red !important;
+			background: transparent;
+			&:hover {
+				color: white !important;
+				border: 2px solid $red;
+				background: $red;
+			}
+		}
+	}	
+	&--hollow {
+		transition: all 0.6s;
+		background: transparent;
+		border: 2px solid white;
+		color:white;
+		&:hover {
+			color: $blue !important;
+			background: white;
+		}
+
+	}
+	&--block {
+		display:block;
+	}
+
+	svg {
+		margin: 0 0.5rem 0 0;
+	}
+}

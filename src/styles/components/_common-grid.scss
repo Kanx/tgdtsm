@@ -1,0 +1,22 @@
+.c-grid {
+	@include bp(tablet) {
+		&--700 {
+			@include grid-container;
+			.c-col {
+				&--quarter {
+					@include grid-column(3);
+				}				
+				&--third {
+					@include grid-column(4);
+				}				
+				&--half {
+					@include grid-column(6);
+				}				
+				&--full {
+					@include grid-column(12);
+				}
+			}
+		}
+
+	}
+}

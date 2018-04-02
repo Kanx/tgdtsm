@@ -1,0 +1,29 @@
+@@include('../partials/header.html', {
+	"title": "Gallery | The Garage Door Team",
+	"canonical": "http://thegaragedoorteamsouthmanchester.co.uk/gallery.html",
+	"pageName": "gallery",
+	"description": "View our recent work and see how much pride we take in fitting our doors."
+})
+<section class="splash splash--gallery">
+	<div class="splash__content">
+		<div class="splash__body">
+			<div class="splash__text">
+				<h1 style="margin-bottom:1.5rem">Have a look at what we've been up to.</h1>
+				
+				<a href="https://www.instagram.com/thegaragedoorteam/" class="btn btn-block btn--secondary-hollow" target="_blank"><i class="fab fa-instagram"></i> Follow us on Instagram <span class="sr-only">(this link opens in a new tab)</span></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div id="instafeed" class="gallery">
+	<div id="loader">
+		<img src="/img/loader.svg" alt="Loading images">
+	</div>
+</div>
+	<p class="content--center" id="load-more-wrapper" style="padding:1.4rem 0 2rem"><button id="load-more" class="btn btn-block btn--primary hollow">Load more</button></p>
+
+@@include('../partials/footer.html', {
+	"loadInstafeed": true
+})

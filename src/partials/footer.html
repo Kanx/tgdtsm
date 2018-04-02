@@ -1,0 +1,91 @@
+	</main>
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<div class="footer__logo">
+				<a href="/">
+	                <img src="/img/tgdtsm-logo.svg" alt="Home">
+	            </a>
+	            <div class="contact__list">
+	            	<ul>
+	            		<li><span>Office:</span> <a href="tel:+441625 531579">01625 531579</a></li>
+	            		<li><span>Emergency:</span> <a href="tel:+447770725603">07770 725603</a></li>
+	            	</ul>
+	            </div>
+			</div>
+				<div class="footer__socials">
+            	<ul>
+            		<li><a href="https://www.instagram.com/thegaragedoorteam/"><i class="fab fa-instagram"></i></a></li>
+            		<li><a href="https://www.facebook.com/The-Garage-Door-Team-South-Manchester-657516604416857/"><i class="fab fa-facebook-square"></i></a></li>
+            	</ul>
+            </div>
+			<div class="footer__nav">
+				<div class="footer__nav-wrapper">
+					<div class="footer__nav-category">
+						<div class="footer__nav-heading"><a href="/service.html">Services</a></div>
+						<ul class="footer__nav-list">
+							<li><a href="/services.html#installations">Installations</a></li>
+							<li><a href="/services.html#repairs">Repairs</a></li>
+							<li><a href="/services.html#automation">Automation</a></li>
+						</ul>
+					</div>
+					<div class="footer__nav-category footer__nav-category--lg">
+						<div class="footer__nav-heading"><a href="/garage-doors.html">Garage&nbsp;Doors</a></div>
+						<ul class="footer__nav-list">
+							<li><a href="/garage-doors.html#up-and-over">Up and over</a></li>
+							<li><a href="/garage-doors.html#sectional">Sectional doors</a></li>
+							<li><a href="/garage-doors.html#side-hinged">Side hinged doors</a></li>
+							<li><a href="/garage-doors.html#roller">Roller doors</a></li>
+
+						</ul>
+					</div>
+					<div class="footer__nav-category footer__nav-category--sm">
+						<div class="footer__nav-heading">Misc</div>
+						<ul class="footer__nav-list">
+							<li><a href="/gallery.html">Gallery</a></li>
+							<li><a href="/brochures.html">Brochures</a></li>
+							<li><a href="/cookies.html">Cookies</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</footer>
+
+@@if (loadInstafeed) {
+	<script type="text/javascript">
+		var loadButton = document.getElementById('load-more');
+		var loadButtonWrapper = document.getElementById('load-more-wrapper');
+	    var feed = new Instafeed({
+	        get: 'user',
+	        userId: '7318377856',
+	        clientId: 'e504332c69b343e6889dac62023ee5a0',
+	        accessToken: '7318377856.e504332.a2aa576673194072b3955ee084ddc6f3',
+	        resolution: "standard_resolution",
+	        limit: 12,
+	        after: function() {
+	        	var loader = document.getElementById('loader');
+	        	if(loader) {
+	        		loader.remove();
+	        	}
+	        	if (!this.hasNext()) {
+	                loadButtonWrapper.remove();
+	            }
+	        },
+	        template: '<div class="gallery__item">' + 
+	        			'<a href="{{link}}" class="gallery__url" target="_blank" >'+
+	        				'<div class="gallery__image-wrapper"><div class="gallery__image">' +
+	        					'<div style="background-image:url(\'{{image}}\');" class="gallery__img"></div>'+
+	        					'<div class="gallery__data">' +
+	        						'<span class="gallery__info gallery__like"><i class="fal fa-heart"></i> {{likes}}</span>' +
+	        						'<span class="gallery__info gallery__comments"><i class="fal fa-comment"></i>{{comments}}</span>' + 
+	        						'</div></div></div></a></div>'
+	    });
+	    loadButton.addEventListener('click', function() {
+            feed.next();
+        });
+	    feed.run();
+	</script>
+}
+</body>
+</html>

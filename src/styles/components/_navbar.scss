@@ -1,0 +1,292 @@
+$nav-breakpoint: 750px;
+$max-nav-width: 1300px;
+
+.header {
+	background: $blue;
+	border-bottom: 5px solid darken($blue, 2%);
+	color: white;
+	padding: 0.5rem 1.5rem;
+	z-index:1;
+	
+
+	transition: height 0.4s;
+	height: 85px;
+	overflow: hidden;
+
+	.contact {
+		display: none;
+		text-align: center;
+	}
+
+	a {
+		color: white;
+	}
+	&__wrapper {
+		max-width: $max-nav-width;
+		margin: auto;
+
+	}
+
+	&__logo {
+		text-align: left;
+		display: flex;
+		a {
+			flex: 1;
+		}
+		img {
+			
+			display:block;
+			height:100px;
+			max-width:150px;
+		}
+	
+	}
+	&__nav-toggle {
+		.nav-toggle {
+			margin: 1.8rem 0.3rem;
+		}
+		text-align: right;
+		button {
+			padding: 1rem 1.5rem;
+			font-size: 3rem;
+			color: white;
+		}
+	}
+	&__nav {
+		display:none;
+		text-align:center;
+		border-bottom: 1px solid transparentize(white,0.6);
+		padding-bottom: 1.3rem;
+		margin: 1rem 0 1.7rem;
+		ul {
+			list-style-type:none;
+		}
+		li {
+			display: block;
+			padding: 0.5rem;
+
+		}
+		a {
+			color: transparentize(white, 0.45);
+			font-size: 2rem;
+			font-weight: 100;
+			transition: color 0.4s;
+			&.is-active, &:hover {
+				color: white;
+			}
+		}
+	}
+
+	&--active {
+		height:100vh;
+		.contact {
+			display:block;
+		}
+		.header__nav {
+			display:block;
+		}
+	}
+	@include bp($nav-breakpoint) {
+		position: static;
+		height: auto;
+		&__wrapper {
+			display: flex;
+			align-items: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+		&__logo {
+			flex: 2;
+		}
+		&__nav-toggle {
+			display: none;
+		}
+		.contact {
+			display:none;
+		}
+		&__nav {
+			border-bottom: none;
+			padding: 0;
+			margin: 0;
+			text-align:right;
+			display:block;
+			flex: 6;
+			ul {
+
+				li {
+					display: inline-block;
+					padding: 0 0.5rem;
+				}
+				a {
+					display:block;
+					border-bottom:none;
+					font-size: 1.05rem;
+					font-weight: 400;
+					//text-transform: uppercase;
+				}
+			}
+		}
+	}
+	@include bp(1200px) {
+		&__nav {
+			text-align:center;
+		}
+		.contact {
+			flex: 2;
+			text-align: right;
+			display: block;
+		}
+	}
+}
+
+
+// burger
+.nav-toggle {
+  position: relative;
+  height: 28px;
+  width: 36px;
+  cursor: pointer;
+  
+  .line-top,
+  .line-middle,
+  .line-bottom {
+    position: absolute;
+    display: block;
+    height: 4px;
+    width: 36px;
+    border-radius: 2px;
+    background: #fff;
+  }
+  
+  .line-top {
+    top: 0;
+    transform-origin: 34px 2px;
+  }
+  
+  .line-middle {
+    top: 12px;
+    transition: opacity 200ms linear;
+  }
+  
+  .line-bottom {
+    bottom: 0;
+    transform-origin: 34px 2px;
+  }
+  
+  &.is-open {
+    .line-top {
+      animation: line-top-out 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+    .line-middle {
+      opacity: 0;
+    }
+    .line-bottom {
+      animation: line-bot-out 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+  &.is-closed {
+    .line-top {
+      animation: line-top-in 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+    .line-middle {
+      transition-delay: 200ms;
+    }
+    .line-bottom {
+      animation: line-bot-in 600ms linear normal;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@keyframes line-top-in {
+  0% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(-60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(15deg);
+  }
+  100% {
+    left: 0;
+    bot: 1px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes line-top-out {
+  0% {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    top: 0;
+    transform: rotate(15deg);
+  }
+  80% {
+    left: -5px;
+    top: 0;
+    transform: rotate(-60deg);
+  }
+  100% {
+    left: -5px;
+    top: 1px;
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes line-bot-in {
+  0% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+  20% {
+    left: -5px;
+    bot: 0;
+    transform: rotate(60deg);
+  }
+  80% {
+    left: 0;
+    bot: 0;
+    transform: rotate(-15deg);
+  }
+  100% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes line-bot-out {
+  0% {
+    left: 0;
+    transform: rotate(0deg);
+  }
+  20% {
+    left: 0;
+    transform: rotate(-15deg);
+  }
+  80% {
+    left: -5px; 
+    transform: rotate(60deg);
+  }
+  100% {
+    left: -5px;
+    transform: rotate(45deg);
+  }
+}
+
+
+

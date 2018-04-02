@@ -1,0 +1,88 @@
+$sidebar-grid: (
+  columns: 8,
+  gutter: 50px,
+  media: 1050px,
+);
+
+
+.has-sidebar {
+	padding: 2rem 0;
+	max-width:1500px;
+	&__wrapper {
+		margin:auto;
+	}
+	@include grid-media($sidebar-grid){
+		@include grid-container;
+		margin:auto;
+
+		section {
+			@include grid-column(5);
+		}		
+		.sidebar {
+			@include grid-column(3);
+		}
+	}
+}
+
+
+.sidebar {
+	margin: 2.5rem 0;
+	@include bp(tablet) {
+		margin:0;
+	}
+	&__component {
+		background: white;
+		margin-bottom: 2rem;
+		border-bottom: 5px solid #ececec;
+		p {
+			margin:0 0 1rem;
+			font-size: 1.05rem;
+		}
+		&--contact {
+			text-align: center;
+			a {
+				//color: white;
+			}
+		
+		
+		}
+	}
+	&__body {
+		//padding: 1rem 0rem;
+	}
+	&__content {
+		padding: 1rem;
+	}
+	&__header {
+		font-size:1.5rem;
+		color: #494949;
+		// text-transform: uppercase;
+		text-align: center;
+		border-bottom: 1px solid #ececec;
+		font-weight:400;
+		padding:1.5rem
+	}
+
+	&__locations {
+		display:flex;
+		margin: 1rem 0;
+		ul {
+			flex:1;
+			font-weight:1;
+			font-size:0.9rem;
+			margin-left:0.5rem;
+
+		}
+		li {
+			margin: 0.2rem 0;
+			svg {
+				color: transparentize($red, 0.2);
+				font-size: 9px;
+				margin-right:0.4rem;
+				margin-bottom:0.1rem;
+			}
+		}
+		
+	}
+
+}

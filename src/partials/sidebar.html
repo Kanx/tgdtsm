@@ -1,0 +1,312 @@
+<aside class="sidebar">
+	<div class="sidebar__component sidebar__component--contact">
+		<div class="sidebar__body">
+			<div class="sidebar__header">
+				Book a <span class="heavy blue">free</span> survey.
+			</div>
+			<div class="sidebar__content">
+				<p>Whether you need a service, repair or completely new garage door, the first thing we will do is perform a free site survey. </p>
+				<div href="tel:+441625 531579" class="contact__number contact__button btn btn--secondary hollow">
+				    <i class="fa fa-phone"></i> 01625 531579
+				</div>      
+			</div>
+
+		</div>
+	</div>
+	<div class="sidebar__component sidebar__component--locations">
+		<div class="sidebar__body">
+			<div class="sidebar__header">
+				Where we cover
+			</div>
+			<div id="map" style="width:100%;height: 290px; display:block;"></div>
+			<div class="sidebar__content">
+				<p>We cover all of South Manchester including the following areas:</p>
+				<div class="sidebar__locations">
+					<ul>
+						<li><i class="fas fa-map-marker"></i>Bramhall</li>
+						<li><i class="fas fa-map-marker"></i>Cheadle Hulme</li>
+						<li><i class="fas fa-map-marker"></i>Stockport</li>
+						<li><i class="fas fa-map-marker"></i>Gatley</li>
+						<li><i class="fas fa-map-marker"></i>Disley</li>
+						<li><i class="fas fa-map-marker"></i>Hazel Grove</li>
+						<li><i class="fas fa-map-marker"></i>Poynton</li>
+						<li><i class="fas fa-map-marker"></i>Altrincham</li>
+					</ul>
+					<ul>
+						<li><i class="fas fa-map-marker"></i>Wilmslow</li>
+						<li><i class="fas fa-map-marker"></i>Handforth</li>
+						<li><i class="fas fa-map-marker"></i>Heald Green</li>
+						<li><i class="fas fa-map-marker"></i>Knutsford</li>
+						<li><i class="fas fa-map-marker"></i>Sale</li>
+						<li><i class="fas fa-map-marker"></i>Hale</li>
+						<li><i class="fas fa-map-marker"></i>Macclesfield</li>
+						<li><i class="fas fa-map-marker"></i>Wythenshawe</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="sidebar__component sidebar__component--contact">
+		<div class="sidebar__body">
+			<div class="sidebar__header">
+				Emergencies
+			</div>
+			
+			<div class="sidebar__content">
+				<p>We carry out same day emergency Garage Door repair services. To find out more and arrange a call out call us on:</p>
+				<a href="tel:+447770 725603" class="contact__number contact__button btn btn--secondary hollow">
+				    <i class="fa fa-phone"></i> 07770 725603
+				</a> 
+			
+			</div>
+
+		</div>
+	</div>
+</aside>
+<script>
+  function initMap() {
+
+    // Create a map object and specify the DOM element for display.
+    var centerCoordinates = {lat: 53.328393, lng: -2.202145}
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: centerCoordinates,
+      zoom: 10,
+      styles: [
+		  {
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#f5f5f5"
+		      }
+		    ]
+		  },
+		  {
+		    "elementType": "labels.icon",
+		    "stylers": [
+		      {
+		        "visibility": "off"
+		      }
+		    ]
+		  },
+		  {
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#616161"
+		      }
+		    ]
+		  },
+		  {
+		    "elementType": "labels.text.stroke",
+		    "stylers": [
+		      {
+		        "color": "#f5f5f5"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "administrative.land_parcel",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#bdbdbd"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "poi",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#eeeeee"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "poi",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#757575"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "poi.business",
+		    "stylers": [
+		      {
+		        "visibility": "off"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "poi.park",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#e5e5e5"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "poi.park",
+		    "elementType": "labels.text",
+		    "stylers": [
+		      {
+		        "visibility": "off"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "poi.park",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#9e9e9e"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#ffffff"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.arterial",
+		    "stylers": [
+		      {
+		        "visibility": "off"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.arterial",
+		    "elementType": "geometry.fill",
+		    "stylers": [
+		      {
+		        "color": "#dcff82"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.arterial",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#757575"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.highway",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#dadada"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.highway",
+		    "elementType": "geometry.fill",
+		    "stylers": [
+		      {
+		        "color": "#d93a3d"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.highway",
+		    "elementType": "labels",
+		    "stylers": [
+		      {
+		        "visibility": "off"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.highway",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#616161"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.local",
+		    "stylers": [
+		      {
+		        "visibility": "off"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "road.local",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#9e9e9e"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "transit.line",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#e5e5e5"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "transit.station",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#eeeeee"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "water",
+		    "elementType": "geometry",
+		    "stylers": [
+		      {
+		        "color": "#c9c9c9"
+		      }
+		    ]
+		  },
+		  {
+		    "featureType": "water",
+		    "elementType": "labels.text.fill",
+		    "stylers": [
+		      {
+		        "color": "#9e9e9e"
+		      }
+		    ]
+		  }
+		]
+    });
+
+    var cityCircle = new google.maps.Circle({
+            strokeColor: '#012a43',
+            strokeOpacity: 1,
+            strokeWeight: 2,
+            fillColor: '#012a43',
+            fillOpacity: 0.4,
+            map: map,
+            center: centerCoordinates,
+            radius: 11500,
+
+          });
+
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5JfSgBdOZwVFDEbmbTT6xBnAPUMHPbNg&callback=initMap"
+async defer></script>

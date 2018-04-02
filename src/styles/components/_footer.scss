@@ -1,0 +1,109 @@
+.footer {
+	background: darken($blue, 5%);
+	padding: 3.5rem 0;
+	text-align:center;
+	p {
+		color: white;
+	}
+	&__wrapper {
+		margin: auto; 
+		max-width: $max-nav-width;
+
+	}
+	&__logo {
+		text-align:center;
+		a {
+			color: white;
+			img {
+				max-width: 200px;
+			}
+		}
+		.contact {
+			margin: 1rem 0;
+
+		}
+	}	
+	&__socials {
+		text-align:center;
+		margin: 0.5rem;
+	
+		li {
+			display: inline-block;
+
+		}
+		a {
+
+			color: white;
+			display:block;
+			padding:0.8rem 0.5rem 0.2rem 0.5rem;
+			font-size: 2.5rem;
+		}
+	}
+
+	&__nav-category {
+		margin: 2.2rem 0;
+		font-size: 1.3rem;
+		text-transform: uppercase;
+		color: transparentize(white, 0.3) ;
+		a {
+			transition: all 0.6s;
+			color: transparentize(white, 0.3);
+			&:hover {
+				color: white;
+			}
+		}
+		ul {
+			margin: 0.8rem 0;
+			font-size: 1rem;
+
+		}
+		li {
+			a {
+				color: transparentize(white, 0.5);
+				display: block;
+				padding: 0.2rem 0;
+			}
+		}
+	}
+	@include bp(750px) {
+		text-align: left;
+		&__wrapper {
+			@include grid-container;
+		}
+		&__logo {
+			@include grid-column(3);
+			text-align:left;
+
+		}
+		&__socials {
+			@include grid-column(2);
+			text-align:left;
+		}
+		&__nav {
+			@include grid-column(7);
+		}	
+		&__nav-wrapper {
+			@include grid-container;
+			margin: auto;
+
+			max-width: 700px;
+		}
+		&__nav-category {
+			@include grid-column(4);
+			margin:  0;
+			text-align:left;
+			font-size: 1rem;
+			ul {
+				margin: 0.5rem 0;
+				font-size: 0.75rem;
+
+			}
+			&--lg {
+				@include grid-column(5);
+			}
+			&--sm {
+				@include grid-column(3);
+			}
+		}
+	}
+} 

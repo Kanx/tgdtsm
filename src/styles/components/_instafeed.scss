@@ -1,0 +1,120 @@
+.gallery {
+	padding: 0.5rem;
+	overflow:hidden;
+	max-width:1200px;
+	margin:auto;
+	&__item {
+		display: inline-block;
+		font-style: normal;
+		font-variant: normal;
+		text-rendering: auto;
+		-webkit-font-smoothing: antialiased;
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0.3rem;
+		margin: 0;
+	    float: left;
+		border: 0;
+		box-sizing: border-box;
+		background-clip: padding-box !important;
+		@include bp(xs) {
+			width: 50%;
+			
+		}		
+		@include bp(tablet) {
+			width: 33.333%;
+		}		
+		@include bp(desktop) {
+			width: 25%;
+		}
+	}
+	&__image {
+		overflow:hidden;
+		position: relative;
+		&-inner {
+			overflow: hidden;
+			height: 0;
+			padding-bottom: 100%;
+
+		}
+
+		&:before {
+			position: absolute;
+		    z-index: 1;
+		    left: 0;
+		    right: 0;
+		    bottom: 0;
+		    top: 0;
+		    content: '';
+		    background-color: $red;
+		    opacity: 0;
+		    transition: opacity .2s ease-in-out;
+		}
+	}
+	&__url:hover, &__url:focus {
+		.gallery__image:before {
+			opacity: 0.7;
+		}
+		.gallery__img {
+			-webkit-transform: scale(1.1);
+			transform: scale(1.1);
+		}	
+		.gallery__data {
+			opacity:1;
+		}
+		.gallery__info  {
+		    opacity:1;	
+		}
+	}
+	&__img {
+		width: 100%;
+		height: auto;
+		transition: -webkit-transform 0.5s cubic-bezier(0.29, 0.74, 0.41, 0.91);
+		transition: transform 0.5s cubic-bezier(0.29, 0.74, 0.41, 0.91);
+		-webkit-transform: scale(1.01);
+		transform: scale(1.0);
+		background-size: cover;
+		padding-bottom: 90%;
+	}
+	&__data {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		width: 70%;
+		opacity: 0;
+		z-index: 1;
+		max-width: 120px;
+
+	}	
+	&__like {
+	    float: right;
+	    opacity: 1;
+	}
+	&__comments {
+	    float: left;
+	    opacity: 1;
+	}
+	&__info {
+	    font-size: 1.125rem;
+	    display: -webkit-box;
+	    display: -moz-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -webkit-box-align: center;
+	    -moz-box-align: center;
+	    -ms-flex-align: center;
+	    align-items: center;
+	    z-index:2;
+	    transition: opacity 0.5s;
+	    opacity:0;
+	    svg {
+	    	margin-right:1rem;
+	    }
+
+	}
+}

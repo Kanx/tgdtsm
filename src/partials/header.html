@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116840818-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-116840818-1');
+    </script>
+
 	<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -16,11 +26,9 @@
 
 	<link rel="canonical" href="@@canonical">
 	<link rel="shortcut icon" type="image/x-icon" href="/img/tgdt-favicon.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+
 	<link rel="stylesheet" href="/css/styles.css">
-    <script defer src="https://pro.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-jTxqWCb7UqRDQDd2Nkuh5BkHe9k+ElbFLa3NaJfid5kBK/+cVktzVRXrw0isFWxf" crossorigin="anonymous"></script>
-    <script defer src="https://pro.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-Ht3fAeBiX/rVmKVyMwONAIIt0aRoPzZgq1FzdRgR9zFo+Kcd8YDwUbFlTItfaYW4" crossorigin="anonymous"></script>
-	<script src="/js/main.min.js"></script>
+
 </head>
 <body>
 	<header class="header">
@@ -43,17 +51,18 @@
                     <li><a @@if (pageName === 'services'){ class="is-active"} href="/services.html">Services</a></li>
                     <li><a @@if (pageName === 'garage-doors'){ class="is-active"} href="/garage-doors.html">Garage Doors</a></li>
                     <li><a @@if (pageName === 'gallery'){ class="is-active"} href="/gallery.html">Gallery</a></li>
- 
-                    <li><a @@if (pageName === 'brochures'){ class="is-active"} href="/brochures.html">Brochures</a></li>
-        
+                    <li><a @@if (pageName === 'brochures'){ class="is-active"} href="/brochures.html">Brochures</a></li>        
                 </ul>
             </nav>
             <div class="contact">
-        
-                <div class="contact__number contact__button btn btn--secondary">
-                    <i class="fa fa-phone"></i> <a href="tel:+441625 531579">01625 531579</a>
-                </div>                
-              
+                <div class="btn btn--secondary" style="padding: 0.5rem 1.2rem">
+                    <div class="contact__number contact__button">
+                        <i class="fas fa-mobile-alt"></i> <a href="tel:+447770725603">07770 725603</a>
+                    </div>        
+                    <div class="contact__number contact__button">
+                        <i class="fa fa-phone"></i> <a href="tel:+441625531579">01625 531579</a>
+                    </div>                
+                  </div>
             </div>
     
         </div>

@@ -1,14 +1,14 @@
 
 .contact {
 	.fa-phone {
-		width: 1rem;
+		width: 50px;
 
 		margin-right:0.2rem;
 	}
-	.fa-mobile {
-		width:0.7rem;
-		color: transparentize(white, 0.15)
+	.fa-mobile-alt {
+		width: 30px;
 	}
+
 	a {
 		margin-left: 0.5rem;
 		display: inline-block;
@@ -56,9 +56,7 @@
 			font-size: 0.8rem;
 			padding: 0;
 		}
-		.fa-phone {
-			width: 1rem;
-		}
+	
 		&__number {
 			font-size: 1.3rem;
 		}	

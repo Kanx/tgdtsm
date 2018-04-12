@@ -39,6 +39,10 @@ img {
   max-width: 100%;
 }
 
+img[src*=".svg"] {
+  width: 100%; 
+}
+
 // Global text styles
 
 p {
@@ -236,22 +240,3 @@ section {
     margin: 0.2rem 0;
   }
 }
-
-// .page-heading {
-//   background: lighten($red, 3%);
-//   text-align: center;
-//   h1 {
-//     font-size: 3.2rem;
-//     margin:0;
-//     color: white;
-//     padding: 8rem 0 1.5rem;
-//     display: block;
-//     //text-transform: uppercase;
-//     font-weight:400;
-//   }
-//   &__content {
-//     max-width:$max-content-width;
-//     margin:auto;
-//     display:block;
-//   }
-// }

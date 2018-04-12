@@ -7,6 +7,7 @@
 	background: linear-gradient(to bottom, rgba(255,255,255,1) 43%,rgba(239,239,239,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 ); /* IE6-9 */
 }
+
 .banner {
 	margin: auto;
 	max-width: $max-content-width;
@@ -95,41 +96,3 @@
 	}
 }
 
-.the-team {
-	background: url(/img/home_meet-the-team.jpg);
-	background-size: cover;
-	margin: 0 auto;
-	padding: 4.5rem 0;
-	h2, p {
-
-	}
-	p {
-		font-size: 1rem;
-	}
-
-	&__img-portrait {
-		background: url(/img/TEMP_mark.jpg) no-repeat;
-		background-size:cover;
-		margin:auto;
-		border-radius: 50%;
-		width:200px;
-		height:200px;
-	}
-
-	&__body {
-		padding: 2rem;
-		h2 {
-			margin-top: 0.3rem;
-		}
-
-	}
-	@include bp(tablet) {
-		&__grid {
-			@include grid-container;
-		}
-		&__img, &__body {
-			@include grid-column(6);
-		}
-
-	}
-}

@@ -68,10 +68,10 @@
   function initMap() {
 
     // Create a map object and specify the DOM element for display.
-    var centerCoordinates = {lat: 53.328393, lng: -2.202145}
+    var centerCoordinates = {lat: 53.299393, lng: -2.192145}
     var map = new google.maps.Map(document.getElementById('map'), {
       center: centerCoordinates,
-      zoom: 10,
+      zoom: 9.9,
       styles: [
 		  {
 		    "elementType": "geometry",
@@ -302,7 +302,7 @@
             fillOpacity: 0.4,
             map: map,
             center: centerCoordinates,
-            radius: 11500,
+            radius: 13000,
 
           });
 
